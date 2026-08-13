@@ -112,16 +112,16 @@ class TodoApp:
                 return None
 
         # Load icons
-        self.check_icon = safe_load_image("tick.png")
-        self.edit_icon = safe_load_image("edit.png")
-        self.cross_icon = safe_load_image("cross.png")
+        self.check_icon = safe_load_image("assets/tick.png")
+        self.edit_icon = safe_load_image("assets/edit.png")
+        self.cross_icon = safe_load_image("assets/cross.png")
 
     def bind_global_shortcuts(self):                                    # Bind universal keyboard shortcuts (Ctrl+Z etc)
         self.root.bind("<Control-z>", lambda e: self.undo_delete())
         self.root.bind("<Command-z>", lambda e: self.undo_delete())
 
     def setup_ui(self):                                                 # Sets up main UI Layout, titles, input area, scroll, list, and actions
-        icon_path = get_resource_path("icon.png")                       # Getting window Icon
+        icon_path = get_resource_path("assets/icon.png")                       # Getting window Icon
         if os.path.exists(icon_path):
             try:
                 self.app_icon = PhotoImage(file=icon_path)
