@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+*.tmp
+*.corrupt_*
+build/
+dist/
+*.spec
+.venv/
+venv/
+.DS_Store
